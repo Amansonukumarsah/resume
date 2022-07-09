@@ -1,0 +1,26 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %} 
+<div class="mt-5">
+ <div class="text-center">
+  <img src="{% static 'core/images/Aman.jpg' %}" alt="ProfilePic" class="img-thumbnail" width="250px" height="150px">
+ </div>
+ <div class="mt-5 text-white mx-5 text-justify">
+  <h1 class="font-weight-bold st-font">Hello,</h1>
+  <div class="px-4" style="line-height:2rem;">
+   <p style="text-indent:100px;"> I am <b class="text-warning">Aman Kumar Sah</b> <br> I am a Web Developers </p>
+   <p>I am Pursing  bachelor’s degree from <b class="text-warning">Maulana Abul Kalam Azad University Of Technology,WB</b></p>
+   <p>I love play Cricket,Coding and Web Developing in Both Frontend and Backend </p>
+   <p class="text-danger">my Codding Profile</p>
+   <div class="d-flex">
+    <a target="_blank" href="https://auth.geeksforgeeks.org/user/sonukumarshah8102/practice/" class="nav-link bg-success">GFG</a>
+    <a target="_blank" href="https://leetcode.com/Aman8102/" class="nav-link bg-success">LEETCODE</a>
+   </div>
+  </div>
+ </div>
+ <div class="text-center">
+  <a href="{% url 'contact' %}" class="btn btn-outline-warning my-3 mr-5">Hire Me</a>
+  <a href="{% url 'contact' %}" class="btn btn-outline-info my-3">Contact</a>
+ </div>
+</div>
+{% endblock content %}
