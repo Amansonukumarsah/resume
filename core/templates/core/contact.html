@@ -7,24 +7,25 @@
       Do you have any questions? Please do not hesitate to contact. I will come back to you within a matter of hours to help you.
     </p>
     <div class="col-sm-9 mb-5">
-      <form action="">
+      <form action="" method="POST">
+        {% csrf_token %}
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="inputName">Your Name</label>
-            <input type="text" class="form-control" id="inputName" />
+            <label for="Name">Your Name</label>
+            <input type="text" class="form-control" name="Name" />
           </div>
           <div class="form-group col-md-6">
-            <label for="inputEmail">Your Email *</label>
-            <input type="email" class="form-control" id="inputEmail" required />
+            <label for="Email">Your Email *</label>
+            <input type="email" class="form-control" name="Email" required />
           </div>
         </div>
         <div class="form-group">
-          <label for="inputSubject">Your Subject</label>
-          <input type="text" class="form-control" id="inputSubject" />
+          <label for="Subject">Your Subject</label>
+          <input type="text" class="form-control" name="Subject" />
         </div>
         <div class="mb-3">
-          <label for="inputTextarea">Your message *</label>
-          <textarea class="form-control" id="inputTextarea" required></textarea>
+          <label for="Message">Your message *</label>
+          <textarea class="form-control" name="Message" required></textarea>
         </div>
         <button class="btn btn-primary" type="submit">Send</button>
       </form>
